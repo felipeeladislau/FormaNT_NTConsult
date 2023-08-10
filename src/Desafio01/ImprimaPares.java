@@ -1,3 +1,5 @@
+package Desafio01;
+
 public class ImprimaPares {
     public static void main(String[] args) {
         System.out.println("Imprimindo os numeros pares com o metodo FOR");
