@@ -1,4 +1,6 @@
-    public class NumerosPrimos {
+package Desafio02;
+
+public class NumerosPrimos {
 
 
             public static boolean Primo(int numero) {
