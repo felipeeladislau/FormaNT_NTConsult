@@ -1,44 +1,34 @@
 import java.text.DecimalFormat;
-import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Digite o valor do custo: R$");
-        double custo = scanner.nextDouble();
-
-        System.out.print("Digite o valor do pagamento: R$");
-        double pagamento = scanner.nextDouble();
-
+    public static void calcularTroco(double custo, double pagamento) {
         double troco = pagamento - custo;
-        System.out.println("Valor do troco: R$" + formatarValor(troco));
+        DecimalFormat df = new DecimalFormat("#0.00");
 
-        int[] notas = {200, 100, 50, 20, 10, 5, 2};
-        int[] moedas = {100, 50, 25, 10, 5, 1};
-
+        System.out.println("Valor do troco: R$" + df.format(troco));
         System.out.println("Menor troco possível:");
 
+        int[] notas = {100, 50, 20, 10, 5, 2, 1};
+        double[] moedas = {0.5, 0.25, 0.1, 0.05, 0.01};
+
         for (int nota : notas) {
-            int quantidadeNotas = (int) (troco / nota);
-            if (quantidadeNotas > 0) {
-                System.out.println(quantidadeNotas + " - nota(s) de R$" + formatarValor(nota / 100.0));
-                troco %= nota;
+            int quantidade = (int) (troco / nota);
+            troco %= nota;
+            if (quantidade > 0) {
+                System.out.println(quantidade + " - nota de " + nota);
             }
         }
 
-        for (int moeda : moedas) {
-            int quantidadeMoedas = (int) (troco * 100 / moeda);
-            if (quantidadeMoedas > 0) {
-                System.out.println(quantidadeMoedas + " - moeda(s) de R$" + formatarValor(moeda / 100.0));
-                troco %= (moeda / 100.0);
+        for (double moeda : moedas) {
+            int quantidade = (int) (troco / moeda);
+            troco %= moeda;
+            if (quantidade > 0) {
+                System.out.println(quantidade + " - moeda de " + df.format(moeda));
             }
         }
-        scanner.close();
     }
 
-    private static String formatarValor(double valor) {
-        DecimalFormat decimalFormat = new DecimalFormat("#,##0.00");
-        return decimalFormat.format(valor);
+    public static void main(String[] args) {
+        calcularTroco(17.35, 20.00);
     }
 }
