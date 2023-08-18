@@ -1,4 +1,4 @@
-package Desafio04;
+package Desafios1Semana.Desafio01.Desafio04;
 public class Funcionario extends Pessoa {
     private String cargo;
     private double salario;

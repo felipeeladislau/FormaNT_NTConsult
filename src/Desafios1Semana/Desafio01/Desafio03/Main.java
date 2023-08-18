@@ -1,6 +1,4 @@
-package Desafio03;
-
-import Desafio03.Palindromo;
+package Desafios1Semana.Desafio01.Desafio03;
 
 import java.util.Scanner;
 

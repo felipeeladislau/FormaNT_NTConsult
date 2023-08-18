@@ -15,7 +15,7 @@ public class Main {
             int quantidade = (int) (troco / nota);
             troco %= nota;
             if (quantidade > 0) {
-                System.out.println(quantidade + " - nota de " + nota);
+                System.out.println(quantidade + " - nota Desafios2Semana.de " + nota);
             }
         }
 
@@ -23,7 +23,7 @@ public class Main {
             int quantidade = (int) (troco / moeda);
             troco %= moeda;
             if (quantidade > 0) {
-                System.out.println(quantidade + " - moeda de " + df.format(moeda));
+                System.out.println(quantidade + " - moeda Desafios2Semana.de " + df.format(moeda));
             }
         }
     }

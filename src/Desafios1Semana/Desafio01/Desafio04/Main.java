@@ -1,4 +1,4 @@
-package Desafio04;
+package Desafios1Semana.Desafio01.Desafio04;
 
 public class Main {
     public static void main(String[] args) {

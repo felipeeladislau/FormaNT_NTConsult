@@ -1,4 +1,4 @@
-package Desafio02;
+package Desafios1Semana.Desafio01.Desafio02;
 
 public class NumerosPrimos {
 

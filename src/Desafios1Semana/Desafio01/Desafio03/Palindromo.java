@@ -1,4 +1,4 @@
-package Desafio03;
+package Desafios1Semana.Desafio01.Desafio03;
 
 public class Palindromo {
     public boolean analisarPalindromo(String texto) {

@@ -1,4 +1,4 @@
-package Desafio01;
+package Desafios1Semana.Desafio01.Desafio06;
 
 public class ImprimaPares {
     public static void main(String[] args) {
