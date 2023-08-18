@@ -1,4 +1,4 @@
-package Desafio05;
+package Desafios1Semana.Desafio01.Desafio05;
 
 public class MatrizIdentidade {
 
