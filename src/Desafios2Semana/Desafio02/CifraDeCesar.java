@@ -1,4 +1,4 @@
-package Desafios2Semana.Desafio03;
+package Desafios2Semana.Desafio02;
 
 
     import java.util.Scanner;
