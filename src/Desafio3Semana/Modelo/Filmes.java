@@ -1,15 +1,26 @@
-package Desafios3Semana;
+package Desafio3Semana.Modelo;
 
-public class  Cadastrofilme {
+public class Filmes {
 
     private int id;
     private String titulo;
     private String genero;
     private int idadeMinima;
     private int tempo;
-    private int valor;
+    private double valor;
     private String tecnologia;
-    private int poltronasDisponiveis;
+    private int poltronasDisponiveis ;
+
+    public Filmes(int id, String titulo, String genero, int idadeMinima, int tempo, double valor, String tecnologia, int poltronasDisponiveis) {
+        this.id = id;
+        this.titulo = titulo;
+        this.genero = genero;
+        this.idadeMinima = idadeMinima;
+        this.tempo = tempo;
+        this.valor = valor;
+        this.tecnologia = tecnologia;
+        this.poltronasDisponiveis = 100;
+    }
 
     public int getId() {
         return id;
@@ -43,11 +54,11 @@ public class  Cadastrofilme {
         this.tempo = tempo;
     }
 
-    public int getValor() {
+    public double getValor() {
         return valor;
     }
 
-    public void setValor(int valor) {
+    public void setValor(double valor) {
         this.valor = valor;
     }
 
@@ -74,4 +85,14 @@ public class  Cadastrofilme {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+    public double calcularValorTotal(int quantidade) {
+        return valor * quantidade;
+    }
+
+
+
+
+
+
 }

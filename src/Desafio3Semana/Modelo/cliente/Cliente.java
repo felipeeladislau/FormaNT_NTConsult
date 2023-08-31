@@ -1,10 +1,20 @@
-package Desafios3Semana;
+package Desafio3Semana.Modelo.cliente;
+
+import Desafio3Semana.Modelo.Filmes;
+import Desafio3Semana.Modelo.TipoUsuario;
+import Desafio3Semana.Modelo.Usuario;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente extends Usuario {
-    private List<Filmes> ingressosComprados;
+    private static List<Filmes> ingressosComprados;
+
+    public Cliente(String nome, TipoUsuario tipoUsuario, int idade, String usuario, String senha) {
+        super(nome, tipoUsuario, idade, usuario, senha);
+
+        ingressosComprados = new ArrayList<>();
+    }
 
     public List<Filmes> getIngressosComprados() {
         return ingressosComprados;
@@ -14,13 +24,7 @@ public class Cliente extends Usuario {
         this.ingressosComprados = ingressosComprados;
     }
 
-    public Cliente(String nome, TipoUsuario tipoUsuario, int idade, String usuario, String senha) {
-        super(nome, tipoUsuario, idade, usuario, senha);
-
-        ingressosComprados = new ArrayList<>();
-    }
-
-    public void comprarIngresso(Filmes filme) {
+    public static void comprarIngresso(Filmes filme) {
         if (filme.getPoltronasDisponiveis() > 0) {
             ingressosComprados.add(filme);
             filme.setPoltronasDisponiveis(filme.getPoltronasDisponiveis() - 1);
@@ -31,14 +35,7 @@ public class Cliente extends Usuario {
 
     }
 
-    /**
-     * 
-     */
-    public void listarFilmes() {
-        
-    }
-
-    public void visualizarIngressosComprados() {
+    public static void visualizarIngressosComprados() {
         if (ingressosComprados.isEmpty()) {
             System.out.println("Você ainda não comprou nenhum ingresso.");
         } else {
@@ -47,17 +44,7 @@ public class Cliente extends Usuario {
                 System.out.println(filme.getTitulo());
             }
         }
-    
-    }
 
-    public void login() {
-        System.out.println("Login efetuado como cliente: " + getNome());
-        // Lógica para efetuar login como cliente
-    }
-
-    public void logout() {
-        System.out.println("Logout efetuado como cliente: " + getNome());
-        // Lógica para efetuar logout como cliente
     }
 
     @Override
@@ -66,3 +53,5 @@ public class Cliente extends Usuario {
     }
 
 }
+
+

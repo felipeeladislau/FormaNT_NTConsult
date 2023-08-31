@@ -1,13 +1,14 @@
-package Desafios3Semana;
+package Desafio3Semana.Modelo;
 
-public class Usuario {
+public abstract class Usuario {
     private String nome;
     private TipoUsuario tipoUsuario;
     private int idade;
     private String usuario;
     private String senha;
 
-    public Usuario(String nome, TipoUsuario tipoUsuario, int idade, String usuario, String senha) {this.nome = nome;
+    public Usuario(String nome, TipoUsuario tipoUsuario, int idade, String usuario, String senha) {
+        this.nome = nome;
         this.tipoUsuario = tipoUsuario;
         this.idade = idade;
         this.usuario = usuario;
@@ -53,4 +54,6 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    // outros métodos comuns a todos os usuários
 }
